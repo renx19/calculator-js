@@ -1,0 +1,159 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
+}
+.calculator {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    background: rgb(255, 255, 255);
+}
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
+}
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+}
+.buttons button:active {
+  transform: scale(0.99);
+}
+.buttons button:hover{
+    color: #ffffff;
+    background-color: hsl(187, 67%, 47%) !important;
+  }
+
+
+.operator {
+  color: #c8cb1d;
+  background-color: hsl(208, 100%, 5%) !important;
+}
+.function {
+    background:#e74444 !important;
+    color: #fff;
+}
+
+.operator:hover {
+    color: #ffffff;
+    background-color: hsl(187, 67%, 47%) !important;
+  }
+  .function:hover{
+    color: #ffffff;
+    background-color: hsl(187, 67%, 47%) !important;
+  }
+.history-container-hidden {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: px;
+    
+}
+
+.clear-history {
+    position: absolute; /* Position the button absolutely within the container */
+    top: 0; /* Align to the top edge of the container */
+    right: 0; /* Align to the right edge of the container */
+    /* Other styling properties for the button */
+}
+
+/* Add this to your existing CSS or create a new CSS file */
+
+/* Position the history container at the top right corner with the same size as the calculator */
+.history-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px; /* Adjust the width as needed */
+    height: 100%; /* Make it the same height as the calculator */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+  }
+  
+  /* Show the history container when the "Show History" button is clicked */
+  .history-container.show {
+    display: block;
+  }
+  
+
+  
+  /* Style for the "Clear History" button */
+  .clear-history {
+    background-color: #e74444;
+    color: white;
+    border: none;
+    padding: 2.5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+    .clear-history:hover {
+    color: #ffffff;
+  background-color: hsl(187, 67%, 47%) !important;
+}
+
+  
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adjust this value as needed */
+}
+.history-container-hidden {
+    height: 120px;
+    width: 280px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 196, 0);
+    font-size: 12px;
+    overflow: scroll;
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+/* For screens with a maximum width of 477px */
+@media (max-width: 477px) {
+    .history-container-hidden {
+        width: 260px;
+        margin-right: 10px !important;
+    }
+}
+
+/* For screens with a maximum width of 799px */
+@media (max-width: 799px) {
+    .history-container-hidden {
+        width: 260px;
+        margin-right: 10px !important;
+    }
+}
